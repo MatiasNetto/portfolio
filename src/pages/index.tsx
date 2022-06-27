@@ -48,7 +48,7 @@ const Title = styled.h1`
   animation: 1s ${fadeInUp} forwards;
 
   ${desktopQuery} {
-    font-size: 5rem;
+    font-size: 4.8rem;
   }
 `;
 
@@ -60,7 +60,7 @@ const Subtitle = styled.h4`
   animation: 1s 0.3s ${fadeInUp} forwards;
 
   ${desktopQuery} {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 `;
 
@@ -70,7 +70,7 @@ const Paragraph = styled.p`
   animation: 1s 0.2s ${fadeInUp} forwards;
 
   ${desktopQuery} {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 `;
 
@@ -85,7 +85,7 @@ const Button = styled.button`
   animation: 1s 0.6s ${fadeInLeft} forwards;
 
   ${desktopQuery} {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 `;
 
@@ -95,28 +95,13 @@ export default function Home() {
       <TopText subtitle="Esta es" title="Mi Home Page" />
       <Container>
         <ImageContainer>
-          <Image
-            src="/images/Me1.png"
-            alt="ashei"
-            // initial={{ x: -30, opacity: 0 }}
-            // animate={{ x: 0, opacity: 1 }}
-            // transition={{ duration: 0.7, delay: 0.5 }}
-          />
+          <Image src="/images/Me1.png" alt="ashei" />
         </ImageContainer>
         <TextContainer>
-          {/* <Title initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.7 }}> */}
           <Title>Matias Netto</Title>
-          {/* <Subtitle
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-        > */}
+
           <Subtitle>Web Developer</Subtitle>
-          {/* <Paragraph
-          initial={{ y: 10, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.7, delay: 0.3 }}
-        > */}
+
           <Paragraph>
             Frontend developer. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit error vel
             debitis. Rerum consectetur perferendis quis doloremque adipisci quae.

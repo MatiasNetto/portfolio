@@ -1,7 +1,8 @@
-import { fadeIn, fadeInLeft, fadeInUp } from 'Common/styles/animations';
+import { fadeIn, fadeInUp } from 'Common/styles/animations';
 import { desktopQuery } from 'Common/styles/breakpoints';
 import colors from 'Common/styles/colors';
 import styled from 'styled-components';
+import Image from 'next/image';
 
 export const Container = styled.div`
   display: flex;
@@ -17,11 +18,16 @@ export const Container = styled.div`
   }
 `;
 
-export const Image = styled.img`
+export const ImageContainer = styled.div`
+  position: relative;
+  width: 100%;
+  height: 25vh;
   opacity: 0;
   animation: 1s 0.3s ${fadeIn} forwards;
 
   ${desktopQuery} {
+    height: 50vh;
+    width: 90vw;
     max-width: 45vw;
     margin-left: 18%;
     filter: brightness(60%);
@@ -29,7 +35,6 @@ export const Image = styled.img`
 `;
 
 export const DataContainer = styled.div`
-  /* width: 100%; */
   ${desktopQuery} {
     position: absolute;
     left: 16vw;
@@ -46,7 +51,7 @@ export const Title = styled.h3`
   animation: 1s 0s ${fadeInUp} forwards;
 
   ${desktopQuery} {
-    font-size: 6rem;
+    font-size: 5rem;
   }
 `;
 
@@ -58,7 +63,7 @@ export const Subtitle = styled.h4`
   animation: 1s 0.2s ${fadeInUp} forwards;
 
   ${desktopQuery} {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 `;
 
@@ -76,7 +81,7 @@ export const Button = styled.button<{ contained?: boolean; delay: number }>`
   animation: 1s ${({ delay }) => 0.7 + delay}s ${fadeIn} forwards;
 
   ${desktopQuery} {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     padding: 0.8rem 1.4rem;
   }
 `;

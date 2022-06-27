@@ -2,8 +2,11 @@
 const nextConfig = {
   reactStrictMode: true,
   compiler: {
-    styledComponents: true
-  }
-}
+    styledComponents: true,
+  },
+  images: {
+    domains: ['external-content.duckduckgo.com'],
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

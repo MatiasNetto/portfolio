@@ -46,6 +46,15 @@ const fadeIn = keyframes`
   }
 `;
 
+const fadeInOpacity70 = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.7;
+  }
+`;
+
 const zoomIn = keyframes`
   0% {
     opacity: 0;
@@ -56,4 +65,4 @@ const zoomIn = keyframes`
   }
 `;
 
-export { fadeInUp, fadeInLeft, fadeInRight, fadeIn, zoomIn };
+export { fadeInUp, fadeInLeft, fadeInRight, fadeIn, fadeInOpacity70, zoomIn };

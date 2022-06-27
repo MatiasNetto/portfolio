@@ -12,10 +12,9 @@ const PROJECTS: IProjectSlideProps[] = [
     tecnologies: [
       {
         name: 'React',
-        image:
-          'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Flogos-download.com%2Fwp-content%2Fuploads%2F2016%2F09%2FReact_logo_logotype_emblem.png&f=1&nofb=1',
+        image: '/images/tecnologies/react.png',
       },
-      { name: 'Styled-Components', image: 'https://styled-components.com/logo.png' },
+      { name: 'Styled-Components', image: '/images/tecnologies/styled-components.png' },
     ],
   },
   {
@@ -26,8 +25,7 @@ const PROJECTS: IProjectSlideProps[] = [
     tecnologies: [
       {
         name: 'HTML',
-        image:
-          'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmpng.subpng.com%2F20180425%2Frwe%2Fkisspng-web-development-html-responsive-web-design-logo-ja-html-5ae04a94d3ebb9.2609257315246485968681.jpg&f=1&nofb=1',
+        image: '/images/tecnologies/html.png',
       },
     ],
   },

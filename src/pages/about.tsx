@@ -1,37 +1,46 @@
 import { FC } from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { desktopQuery } from '../Common/styles/breakpoints';
 import InfoPanel from '../Components/About/InfoPanel/InfoPanel.component';
 import TopText from '../Components/Utils/TopText';
 import { zoomIn } from 'Common/styles/animations';
+import Image from 'next/image';
+
+import meImage from '../../public/images/Me2.png';
 
 const Container = styled.div`
+  width: calc(100vw - 4rem);
+
   display: flex;
   flex-direction: column;
   margin-bottom: 4rem;
 
   ${desktopQuery} {
     flex-direction: row;
-    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
   }
 `;
 
 const ImageContainer = styled.div`
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 60vw;
+  padding: 0 13%;
 
   animation: 0.8s ${zoomIn} forwards;
 
   ${desktopQuery} {
+    width: 40%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
     justify-content: start;
-    width: 50%;
+    margin: 0 6rem 0 0;
+    /* padding: 5rem; */
   }
 `;
 
-const Image = styled.img`
+const ImageStyled = styled.img`
   width: 70%;
   margin: 0 auto;
 
@@ -48,7 +57,8 @@ const about: FC = () => {
       <TopText subtitle="Un poco" title="Sobre mi" />
       <Container>
         <ImageContainer>
-          <Image src="/images/Me2.png" alt="" />
+          <Image src={meImage} alt="Yo" layout="fill" objectFit="contain" height={1} width={1} />
+          {/* <ImageStyled src="/images/Me2.png" alt="" /> */}
         </ImageContainer>
         <InfoPanel />
       </Container>

@@ -20,7 +20,7 @@ export const Image = styled.img<{ delay: number }>`
   animation: 1s ${({ delay }) => delay * 0.1 + 0.3}s ${fadeInUp} forwards;
 
   ${desktopQuery} {
-    height: 3.5rem;
-    width: 3.5rem;
+    height: 3rem;
+    width: 3rem;
   }
 `;

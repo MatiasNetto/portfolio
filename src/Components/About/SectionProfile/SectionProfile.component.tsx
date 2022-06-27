@@ -17,7 +17,7 @@ const SectionProfile: FC = () => {
     <>
       <Paragraph delay={0.1}>
         Hola, mi nombre es Matias, soy desarollador web frontend especializado en React.js ⚛️, aunque con conocimientos
-        de backend con Node, Express, MongoDB, PHP y mas!
+        de backend con Node, Express, MongoDB, Postgresql y mas!
       </Paragraph>
       <Paragraph delay={0.2}>
         Soy estudiante de licenciatura informatica en la Universidad nacional de Quilmes (UNQ) 🤓

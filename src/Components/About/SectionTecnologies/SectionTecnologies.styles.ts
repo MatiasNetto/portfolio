@@ -18,11 +18,13 @@ export const TecnologyContainer = styled.div<{ delay: number }>`
   animation: 1s ${({ delay }) => `0.${delay}`}s ${fadeInUp} forwards;
 `;
 
-export const Image = styled.img`
+export const ImageContainer = styled.div`
   width: 2rem;
+  height: 2rem;
 
   ${desktopQuery} {
     width: 2rem;
+    height: 2rem;
   }
 `;
 export const Name = styled.p`
