@@ -1,12 +1,23 @@
-import { FC } from 'react';
+import { ITecnology } from './TecnologiesRow.interface';
+import { FC, useState } from 'react';
 import { ITecnologiesRowInterface } from './TecnologiesRow.interface';
-import { Container, Image } from './TecnologiesRow.styles';
+import { Container, ImageContainer, TecnologyContainer, Tooltip } from './TecnologiesRow.styles';
+import Image from 'next/image';
 
 const TecnologiesRow: FC<ITecnologiesRowInterface> = ({ tecnologies }) => {
   return (
     <Container>
       {tecnologies.map((tecnology, i) => (
-        <Image src={tecnology.image} key={i} delay={i} alt={tecnology.name} />
+        <ImageContainer key={i} delay={i}>
+          <Image
+            src={tecnology.image}
+            alt={tecnology.name}
+            layout="fill"
+            objectFit="contain"
+            quality={1}
+            sizes="20vw"
+          />
+        </ImageContainer>
       ))}
     </Container>
   );

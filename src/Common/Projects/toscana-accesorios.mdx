@@ -1,0 +1,52 @@
+---
+id: 3
+title: Toscana accesorios
+subtitle: Catalogo web
+website: https://toscana-accesorios.web.app/
+image: /images/projects/Toscana/toscana-img-1.png
+tecnologies: React,Styled-Components,JavaScript,Firebase
+---
+
+# Presentacion
+
+Toscana accesorios es una pagina web desarollada para un emprendimiento avocado a la venta de accesorios, el objetivo con este proyecto fue el de proveer a toscana de una plataforma web en la cual sus clientes puedan observar el catalogo de sus productos y consultar por los mismos si asi lo desean.
+
+<Button to="https://toscana-accesorios.web.app/" contained>Ver sitio web</Button>
+
+![Toscana image](/images/projects/Toscana/toscana-img-1.png)
+
+# Caracteristicas
+
+La pagina cuenta con una sección “Home” la cual contiene el acceso a las diferentes categorías de productos así como información útil para el usuario, como podría ser los materiales con los que trabaja el emprendimiento, su política de cambio, política de envíos y entregas, etc.
+
+Tambien cuenta con una pagina en la que se muestran los productos de cada categoría por separado, contando cada producto a su vez con una pagina especifica donde se muestran múltiples imágenes del mismo acompañadas con una descripción y el botón para consultar por el mismo.
+
+Por ultimo cuenta con un panel de administración que le permite al emprendimiento el agregar, quitar y modificar los productos, permitiendo agregar tags como "New" o "Mas vendido", marcar productos como fuera de stock o incluso ocultarlos.
+
+![Panel de administracion](/images/projects/Toscana/toscana-img-4.png)
+
+
+# Tecnologias
+
+<Tecnologies>React,Styled-Components,JavaScript,Firebase</Tecnologies>
+
+Para este proyecto decidí utilizar React como librería de JavaScript ya que es la librería SPA con la que me siento mas cómodo trabajando, ademas de que para el emprendimiento era importante la experiencia del cliente en la pagina, y React debido a la capacidad de navegar en la web sin la necesidad de refrescar la pagina era una gran opción para mejorar este punto.
+
+Al momento de estilizar la pagina me plantee el hecho de utilizar alguna librería de css o librería de componentes como MUI, Chakra UI o Tailwind CSS, pero al final me termine decantando por hacerlo desde cero con Styled-Components, así podría darle una mayor personalidad a la pagina y plasmar el estilo de la marca en el diseño de la misma.
+
+La versatilidad con la que esta librería permite cambiar los estilos de los elementos en base a condiciones y definir propiedades por parámetros son características que me fascinan y creo que agiliza mucho el desarrollo.
+
+
+<Galery images={['/images/projects/Toscana/toscana-img-2.png','/images/projects/Toscana/toscana-img-3.png']}/>
+
+# Problemas en el desarollo
+
+Durante el desarrollo tuve que enfrentarme con diversos problemas, el primero de ellos fue la persistencia de datos, yo jamas había trabajado con un sistema que necesite guardar datos de forma permanente, es decir con una base de datos, y para el tiempo que tenia no podía aprender un sistema como MongoDB o MySQL, por lo que decidí utilizar **Firebase** una plataforma que permite la creación y utilización de una base de datos y sistema de autenticación de manera sencilla y desde el lado del cliente.
+
+Otro problema importante fue que cada vez que se entraba a un producto o una categoría se volvía a hacer una petición de la información a la base de datos, mostrando pantallas de carga innecesarias ya que esos datos ya habían sido pedidos de manera reciente. Para economizar el coste algorítmico de la petición y el tiempo de espera de la misma, implemente un sistema en el cual la primera vez que se piden los datos de, por ejemplo,  una categoría, estos se guardan en un estado global, así, la próxima vez que se precise de los datos, antes de hacer una llamada a la base de datos, el sistema verificara si estos encuentran “cacheados” en este estado global y, en caso de ser así, los recupera directamente de allí.
+
+
+![Toscana image](/images/projects/Toscana/toscana-img-5.png)
+{/* 
+![Video](/images/projects/Toscana/video)
+*/}

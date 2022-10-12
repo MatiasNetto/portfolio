@@ -1,0 +1,53 @@
+---
+id: 2
+title: Obra social
+subtitle: Web app
+website: https://obra-social-app.herokuapp.com/#/
+image: /images/projects/ObraSocial/obra-social-img-1.png
+tecnologies: React,TypeScript,MaterialUI,Node,MongoDB
+---
+
+# Presentacion
+
+Obra social app es una aplicación web de gestión de turnos, con capacidad de registrar turnos en distintas fechas y horarios, con distintos doctores y visualizar una cartilla medica y de clínicas.
+
+Desarrollado con un Frontend (React) y un Backend (Node.js) independientes entre si, utilizando **MongoDB, Express** y **MaterialUI** como principales librerías.
+
+<Button to="https://obra-social-app.herokuapp.com/#/" contained>Ver sitio web</Button>
+
+<p><small>(Puede tardar en cargar debido a heroku)</small></p>
+
+# Caracteristicas
+
+- Cuenta con un calendario que posibilita al usuario ver sus turnos de una manera mas grafica y organizada, ademas de una seccion especial para manejar los turnos.
+
+- Cuenta con un formulario para solicitar nuevos turnos eligiendo doctor fecha y hora
+
+- Cuenta con una cartilla medica y una cartilla de clinicas
+
+- Cuenta con una sección para visualizar y editar la información personal del perfil
+
+Los disponibilidad de turnos de cada doctor funcionan de la forma esperada, si el usuario “A” saca turno para un día y hora este turno no se encontrara disponible para solicitar para el usuario “B”, al menos que el usuario “A” lo cancele.La disponibilidad de los turnos de cada doctor 
+
+
+![Calendario](/images/projects/ObraSocial/obra-social-img-2.png)
+
+# Tecnologias
+
+
+<Tecnologies>React,TypeScript,MaterialUI,Node,MongoDB</Tecnologies>
+
+
+La aplicación se construyo utilizando el stack MERN (**MongoDB, Express, React, Node**), ademas esta completamente desarrollado con **TypeScript** (Backend y Frontend por igual)
+
+Para el backend decidí utilizar **Node.js** y **Express**, ya que se adaptan muy bien a la base de datos que planeaba utilizar, **MongoDB**. Para manejar las conexiones y los datos de MongoDB utilice **Mongoose**, un “object modeling tool” que permite tener un sistema de modelos para tus datos, así como realizar operaciones en la base de datos de manera sencilla. La utilizacion de **TypeScript** hace a la aplicacion mas robusta, con menos probabilidad de cometer errores en el desarrollo que se trasladen a la produccion gracias a su sistema de tipos.
+
+Puedes encontrar la documentación de la API <ins> [haciendo click aquí](https://obra-social-app.herokuapp.com/api) </ins>
+
+Para el frontend decidí utilizar **React** como librería SPA, junto con **MateriaUI** como librería de componentes visuales, esto permitió un desarrollo mas veloz. La utilizacion de **TypeScript** ayuda a evitar errores de tipos en tiempo de ejecucion y es esto mismo lo que agiliza el desarrollo.
+
+También decidí utilizar **React Query**, una librería para facilitar la petición de datos, el cacheo de los mismos y la sincronización con el estado del servidor.
+
+<Galery images={['/images/projects/ObraSocial/obra-social-img-3.png','/images/projects/ObraSocial/obra-social-img-4.png']}/>
+
+

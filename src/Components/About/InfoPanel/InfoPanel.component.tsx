@@ -48,7 +48,7 @@ const TECNOLOGIES_DATA: ITecnology[] = [
     name: 'CSS',
   },
   {
-    image: '/images/tecnologies/js.png',
+    image: '/images/tecnologies/javascript.png',
     name: 'JavaScript',
   },
   {

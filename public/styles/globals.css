@@ -32,6 +32,7 @@ a {
 
 .splide {
   padding: 2.5rem !important;
+  width: 100vw;
 }
 
 .splide__arrow--prev {

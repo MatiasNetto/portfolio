@@ -1,0 +1,52 @@
+---
+id: 1
+title: Urban clothes
+subtitle: E-commerce
+website: https://catalogue-with-cart.web.app/ 
+image: /images/projects/UrbanClothes/urban-clothes-img-1.png
+tecnologies: React,Redux,Styled-Components,JavaScript,Firebase
+---
+
+
+# Presentacion
+
+Urban clothes es una pagina web, estilo E-commerce, con diferentes categorías, productos con distintos talles, la posibilidad de agregar productos con descuento y hasta un carrito de compras para organizar tu pedido
+
+<Button to="https://catalogue-with-cart.web.app/" contained>Ver sitio web</Button>
+
+
+# Caracteristicas
+
+- Cuenta con 4 categorías con productos independientes
+
+- Capacidad de filtrado de productos por talle
+
+- Posibilidad de colocar productos en oferta o marcarlos como sin stock
+
+- Carrito de compras que permite múltiples productos y cantidades de los mismos
+
+- Los productos se van renderizando una vez entran en pantalla para ahorrar recursos
+
+- Panel de administración para los productos
+
+![Urban Clothes](/images/projects/UrbanClothes/urban-clothes-img-1.png)
+
+# Desarrollo
+
+Este proyecto surge como la “evolución” de **Toscana accesorios**, con el objetivo de mejorar la estructura del proyecto y la optimización de los recursos, ademas de agregarle un carrito y una pasarela de compras.
+
+La primera decisión a tomar sobre el proyecto base (Toscana accesorios) fue extraer toda la lógica de las llamadas a la base de datos a servicios individuales, permitiendo abstraer la lógica de las peticiones de los componentes. La siguiente decisión clave fue la de incluir una librería para el manejo del estado global, lo cual mejoro considerablemente la legibilidad de los componentes.
+
+Finalmente se agrego el carrito de compras con la pasarela de compras, se mejoro el panel de administración de productos (permitiendo agregar talles y descuentos a los productos) y se agrego una sección para poder visualizar gráficos con la cantidad de visitas por día/mes y la cantidad de ventas de cada producto
+
+
+<Galery images={['/images/projects/UrbanClothes/urban-clothes-img-4.png','/images/projects/UrbanClothes/urban-clothes-img-5.png']}/>
+
+# Tecnologias
+
+<Tecnologies>React,Redux,Styled-Components,JavaScript,Firebase</Tecnologies>
+
+Al ser una evolución de Toscana accesorios, sigue utilizando **React** como librería de componentes y SPA, **Styled-Components** para el estilizado de la pagina y **Firebase** como base de datos y servicio de autenticación, aunque a este stack se le agrega **Redux** para el maejo del estado global de la aplicación.
+
+
+![Urban Clothes](/images/projects/UrbanClothes/urban-clothes-img-3.png)

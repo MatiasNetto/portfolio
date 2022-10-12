@@ -15,6 +15,17 @@ const fadeInUp = keyframes`
   }
 `;
 
+const fadeInDown = keyframes`
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: 'none';
+  }
+`;
+
 const fadeInLeft = keyframes`
   0% {
     opacity: 0;
@@ -65,4 +76,4 @@ const zoomIn = keyframes`
   }
 `;
 
-export { fadeInUp, fadeInLeft, fadeInRight, fadeIn, fadeInOpacity70, zoomIn };
+export { fadeInUp, fadeInDown, fadeInLeft, fadeInRight, fadeIn, fadeInOpacity70, zoomIn };

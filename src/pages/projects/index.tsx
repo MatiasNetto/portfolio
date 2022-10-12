@@ -1,10 +1,10 @@
 import TopText from 'Components/Utils/TopText';
 import { FC } from 'react';
 import styled from 'styled-components';
-import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css/sea-green';
 import ProjectsSlider from 'Components/Portfolio/ProjectSlider/ProjectsSlider';
 import { desktopQuery } from 'Common/styles/breakpoints';
+import { getAllFilesMetadata } from 'Lib/mxd';
 
 const Container = styled.div`
   width: 100%;
@@ -22,15 +22,23 @@ const Container = styled.div`
   }
 `;
 
-const Projects: FC = () => {
+const Projects: FC<{ projects: any[] }> = ({ projects }) => {
   return (
     <>
       <TopText subtitle="Algunos de" title="Mis Proyectos" />
       <Container>
-        <ProjectsSlider />
+        <ProjectsSlider projects={projects} />
       </Container>
     </>
   );
 };
+
+export async function getStaticProps() {
+  const projects = await getAllFilesMetadata();
+
+  return {
+    props: { projects },
+  };
+}
 
 export default Projects;

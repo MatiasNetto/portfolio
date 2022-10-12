@@ -5,6 +5,9 @@ import { fadeInLeft, fadeInRight, fadeInUp } from 'Common/styles/animations';
 import TopText from '../Components/Utils/TopText';
 
 const Container = styled.div`
+  margin-top: 2rem;
+  padding-bottom: 10vh;
+
   ${desktopQuery} {
     display: flex;
     flex-direction: row-reverse;
@@ -28,19 +31,22 @@ const ImageContainer = styled.div`
 `;
 
 const Image = styled.img`
-  height: 40vh;
+  height: auto;
+  width: 100%;
   opacity: 0;
   animation: 1s 0.6s ${fadeInRight} forwards;
 
   ${desktopQuery} {
     height: 60vh;
+    width: auto;
   }
 `;
 
 const TextContainer = styled.div``;
 
 const Title = styled.h1`
-  font-size: 3rem;
+  font-size: 2.6rem;
+  font-weight: 300;
   margin: 0;
   margin-top: 1rem;
   color: #fff;
@@ -54,6 +60,7 @@ const Title = styled.h1`
 
 const Subtitle = styled.h4`
   font-size: 1rem;
+  font-weight: 300;
   margin: 0;
   color: #eee;
   opacity: 0;

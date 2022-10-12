@@ -1,4 +1,5 @@
 import { Splide } from '@splidejs/react-splide';
+import { IProjectMetadata } from 'Common/Interfaces/mxd.interface';
 import { FC } from 'react';
 import ProjectSlide from '../ProjectSlide/ProjectSlide';
 import { IProjectSlideProps } from '../ProjectSlide/ProjectSlide.interface';
@@ -31,13 +32,14 @@ const PROJECTS: IProjectSlideProps[] = [
   },
 ];
 
-const ProjectsSlider: FC = () => {
+const ProjectsSlider: FC<{ projects: IProjectMetadata[] }> = ({ projects }) => {
+  console.log(projects);
   return (
     <Splide
       options={{ type: 'slide', pagination: true, arrows: true, classes: { arrows: 'custom-arrow-style' } }}
-      style={{ width: '100%', height: '70vh' }}
+      style={{ width: '100vw'!, height: '70vh' }}
     >
-      {PROJECTS.map((project, i) => (
+      {projects.map((project, i) => (
         <ProjectSlide {...project} key={i} />
       ))}
     </Splide>

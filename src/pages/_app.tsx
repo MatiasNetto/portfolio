@@ -1,9 +1,9 @@
-import Head from 'next/head';
 import styled from 'styled-components';
 import colors from '../Common/styles/colors';
 import Navbar from '../Components/Utils/Navbar';
 import '../../public/styles/globals.css';
 import { desktopQuery } from 'Common/styles/breakpoints';
+import { useRouter } from 'next/router';
 
 const Background = styled.div`
   display: flex;
@@ -26,6 +26,17 @@ interface IProps {
 }
 
 function MyApp({ Component, pageProps }: IProps) {
+  const router = useRouter();
+
+  if (router.pathname === '/projects/[slug]') {
+    return (
+      <Background>
+        <Component {...pageProps} />
+        <Navbar />
+      </Background>
+    );
+  }
+
   return (
     <Background>
       <Container>

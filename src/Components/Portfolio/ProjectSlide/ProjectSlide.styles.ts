@@ -11,7 +11,7 @@ export const Container = styled.div`
   position: relative;
 
   ${desktopQuery} {
-    /* width: fit-content; */
+    width: 100%;
     flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
@@ -30,7 +30,7 @@ export const ImageContainer = styled.div`
     width: 90vw;
     max-width: 45vw;
     margin-left: 18%;
-    filter: brightness(60%);
+    filter: brightness(70%);
   }
 `;
 
@@ -72,7 +72,7 @@ export const Button = styled.button<{ contained?: boolean; delay: number }>`
   background: ${({ contained }) => (contained ? 'transparent' : colors.lightBlue)};
   border-radius: 4px;
   margin-right: 1rem;
-  padding: 0.4rem 0.8rem;
+  padding: 0.5rem 0.8rem;
   color: #fff;
   font-size: 1.1rem;
   cursor: pointer;

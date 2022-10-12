@@ -6,7 +6,7 @@ export const Paragraph = styled.p<{ delay?: number }>`
   color: #ddd;
   opacity: 0;
   font-weight: 100;
-  font-size: 0.9rem;
+  font-size: 0.98rem;
   animation: 1s ${({ delay = 0 }) => delay}s ${fadeInUp} forwards;
 
   ${desktopQuery} {

@@ -5,7 +5,9 @@ import TopText from 'Components/Utils/TopText';
 import { FC } from 'react';
 import styled from 'styled-components';
 
-const Container = styled.div``;
+const Container = styled.div`
+  padding-bottom: 10vh;
+`;
 
 const Contact: FC = () => {
   return (
