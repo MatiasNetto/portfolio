@@ -1,5 +1,5 @@
 import { desktopQuery } from 'Common/styles/breakpoints';
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 import styled from 'styled-components';
 
 const PComponent = styled.p`
@@ -12,7 +12,7 @@ const PComponent = styled.p`
 `;
 
 interface IProps {
-  children?: JSX.Element;
+  children?: ReactNode;
 }
 
 const CustomP: FC<IProps> = ({ children }) => {

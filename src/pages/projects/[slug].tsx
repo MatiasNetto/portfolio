@@ -61,7 +61,7 @@ export const getStaticPaths = () => {
     return { params: { slug: name.replace('.mdx', '') } };
   });
 
-  return { paths, fallback: true };
+  return { paths, fallback: false };
 };
 
 interface IProps extends ParsedUrlQuery {

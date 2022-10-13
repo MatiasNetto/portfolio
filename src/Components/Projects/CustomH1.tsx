@@ -1,9 +1,9 @@
 import { desktopQuery } from 'Common/styles/breakpoints';
-import { FC } from 'react';
+import { Component, DetailedHTMLProps, FC, HTMLAttributes, ReactNode } from 'react';
 import styled from 'styled-components';
 
 interface IProps {
-  children?: JSX.Element;
+  children?: ReactNode;
 }
 
 const H2 = styled.h2`
