@@ -3,7 +3,7 @@ id: 3
 title: Toscana accesorios
 subtitle: Catalogo web
 website: https://toscana-accesorios.web.app/
-image: /images/projects/Toscana/toscana-img-1.png
+image: /images/projects/Toscana/toscana-img-1.jpg
 tecnologies: React,Styled-Components,JavaScript,Firebase
 ---
 
@@ -13,7 +13,7 @@ Toscana accesorios es una pagina web desarollada para un emprendimiento avocado 
 
 <Button to="https://toscana-accesorios.web.app/" contained>Ver sitio web</Button>
 
-![Toscana image](/images/projects/Toscana/toscana-img-1.png)
+![Toscana image](/images/projects/Toscana/toscana-img-1.jpg)
 
 # Caracteristicas
 
@@ -23,7 +23,7 @@ Tambien cuenta con una pagina en la que se muestran los productos de cada catego
 
 Por ultimo cuenta con un panel de administración que le permite al emprendimiento el agregar, quitar y modificar los productos, permitiendo agregar tags como "New" o "Mas vendido", marcar productos como fuera de stock o incluso ocultarlos.
 
-![Panel de administracion](/images/projects/Toscana/toscana-img-4.png)
+![Panel de administracion](/images/projects/Toscana/toscana-img-4.jpg)
 
 
 # Tecnologias
@@ -37,7 +37,7 @@ Al momento de estilizar la pagina me plantee el hecho de utilizar alguna librer�
 La versatilidad con la que esta librería permite cambiar los estilos de los elementos en base a condiciones y definir propiedades por parámetros son características que me fascinan y creo que agiliza mucho el desarrollo.
 
 
-<Galery images={['/images/projects/Toscana/toscana-img-2.png','/images/projects/Toscana/toscana-img-3.png']}/>
+<Galery images={['/images/projects/Toscana/toscana-img-2.jpg','/images/projects/Toscana/toscana-img-3.jpg']}/>
 
 # Problemas en el desarollo
 
@@ -46,7 +46,7 @@ Durante el desarrollo tuve que enfrentarme con diversos problemas, el primero de
 Otro problema importante fue que cada vez que se entraba a un producto o una categoría se volvía a hacer una petición de la información a la base de datos, mostrando pantallas de carga innecesarias ya que esos datos ya habían sido pedidos de manera reciente. Para economizar el coste algorítmico de la petición y el tiempo de espera de la misma, implemente un sistema en el cual la primera vez que se piden los datos de, por ejemplo,  una categoría, estos se guardan en un estado global, así, la próxima vez que se precise de los datos, antes de hacer una llamada a la base de datos, el sistema verificara si estos encuentran “cacheados” en este estado global y, en caso de ser así, los recupera directamente de allí.
 
 
-![Toscana image](/images/projects/Toscana/toscana-img-5.png)
+![Toscana image](/images/projects/Toscana/toscana-img-5.jpg)
 {/* 
 ![Video](/images/projects/Toscana/video)
 */}
