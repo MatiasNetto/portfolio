@@ -12,7 +12,7 @@ const formatMetadata = (metadata: IProjectMetadataNoTecnologies, fileName: strin
   const tecnologies: ITecnologies[] = [];
 
   metadata.tecnologies.split(',').forEach((tec) => {
-    tecnologies.push({ name: tec, image: `/images/tecnologies/${tec.toLocaleLowerCase()}.png` });
+    tecnologies.push({ name: tec, image: `/images/tecnologies/${tec.toLocaleLowerCase()}.svg` });
   });
 
   return { ...metadata, tecnologies, slug: fileName.replace('.mdx', '') };

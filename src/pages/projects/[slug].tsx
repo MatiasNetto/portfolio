@@ -13,6 +13,7 @@ import Tecnologies from 'Components/Projects/TecnologiesDisplay';
 import CustomP from 'Components/Projects/CustomP';
 import Galery from 'Components/Projects/Galery';
 import { desktopQuery } from 'Common/styles/breakpoints';
+import Head from 'next/head';
 
 interface IProjectBlogProps {
   metadata: IProjectMetadata;
@@ -45,12 +46,17 @@ const components = { h1: CustomH1, p: CustomP, img: CustomImage, Button, Tecnolo
 
 const ProjectBlog: FC<IProjectBlogProps> = ({ metadata, mdxContent }) => {
   return (
-    <MainContainer>
-      <Hero image={metadata.image} title={metadata.title} subtitle={metadata.subtitle} />
-      <ContentContainer>
-        <MDXRemote {...mdxContent} components={components} />
-      </ContentContainer>
-    </MainContainer>
+    <>
+      <Head>
+        <title>Matias Netto - {metadata.title}</title>
+      </Head>
+      <MainContainer>
+        <Hero image={metadata.image} title={metadata.title} subtitle={metadata.subtitle} />
+        <ContentContainer>
+          <MDXRemote {...mdxContent} components={components} />
+        </ContentContainer>
+      </MainContainer>
+    </>
   );
 };
 

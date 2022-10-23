@@ -66,22 +66,3 @@ export const Subtitle = styled.h4`
     font-size: 1.8rem;
   }
 `;
-
-export const Button = styled.button<{ contained?: boolean; delay: number }>`
-  border: ${({ contained }) => (contained ? `1px solid ${colors.lightBlue}` : 'none')};
-  background: ${({ contained }) => (contained ? 'transparent' : colors.lightBlue)};
-  border-radius: 4px;
-  margin-right: 1rem;
-  padding: 0.5rem 0.8rem;
-  color: #fff;
-  font-size: 1.1rem;
-  cursor: pointer;
-
-  opacity: 0;
-  animation: 1s ${({ delay }) => 0.7 + delay}s ${fadeIn} forwards;
-
-  ${desktopQuery} {
-    font-size: 1.4rem;
-    padding: 0.8rem 1.4rem;
-  }
-`;

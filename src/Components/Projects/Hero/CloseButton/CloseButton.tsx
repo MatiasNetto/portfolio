@@ -1,7 +1,6 @@
 import { fadeInDown } from 'Common/styles/animations';
 import colors from 'Common/styles/colors';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { FC } from 'react';
 import styled from 'styled-components';
 
@@ -29,22 +28,19 @@ const Container = styled.button`
   border-radius: 100%;
   background: ${colors.lightBackground}cc;
   z-index: 99;
+  cursor: pointer;
 
   opacity: 0;
   animation: 1s 1.5s ${fadeInDown} forwards;
 `;
 
 const CloseButton: FC = () => {
-  const router = useRouter();
-
-  const handleClick = () => {
-    router.back();
-  };
-
   return (
-    <Container onClick={handleClick}>
-      <XIcon fill="#fffc" height="1.5rem" width="1.5rem" />
-    </Container>
+    <Link href={'/projects'} passHref>
+      <Container>
+        <XIcon fill="#ffff" height="1.5rem" width="1.5rem" />
+      </Container>
+    </Link>
   );
 };
 

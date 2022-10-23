@@ -39,7 +39,9 @@ export const BackgoundImage = styled.div<{ image: string }>`
   animation: 1s 0.2s ${fadeIn} forwards;
 
   ${desktopQuery} {
-    background: url(${({ image }) => image});
+    background: url(${({ image }) => image}) no-repeat;
+    background-size: cover;
+    background-position: center;
     filter: blur(5px) brightness(70%);
   }
 `;

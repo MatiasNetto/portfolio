@@ -6,7 +6,9 @@ import TopText from '../Components/Utils/TopText';
 import { zoomIn } from 'Common/styles/animations';
 import Image from 'next/image';
 
-import meImage from '../../public/images/Me2.png';
+// import meImage from '../../public/images/Me2.png';
+import meImage from '../../public/images/Me2.webp';
+import Head from 'next/head';
 
 const Container = styled.div`
   width: calc(100vw - 4rem);
@@ -54,7 +56,10 @@ const ImageStyled = styled.img`
 const about: FC = () => {
   return (
     <>
-      <TopText subtitle="Un poco" title="Sobre mi" />
+      <Head>
+        <title>Matias Netto - Sobre Mí</title>
+      </Head>
+      <TopText subtitle="Un poco" title="Sobre mí" />
       <Container>
         <ImageContainer>
           <Image src={meImage} alt="Yo" layout="fill" objectFit="contain" height={1} width={1} />

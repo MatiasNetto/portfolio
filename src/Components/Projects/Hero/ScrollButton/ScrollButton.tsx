@@ -18,8 +18,6 @@ const ScrollButton: FC = () => {
     scrollTo({ top: window.innerHeight - 50, left: 0, behavior: 'smooth' });
   };
 
-  //fff,ddd,bbb
-
   return (
     <Button onClick={handleButtonClick}>
       <AngleDownIcon fill="#ffff" width="2rem" height="2rem" />

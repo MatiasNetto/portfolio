@@ -1,14 +1,17 @@
 import Link from 'next/link';
 import { FC } from 'react';
 import styled from 'styled-components';
-import HouseImage from '../../../public/house-solid.svg';
 import { desktopQuery } from '../../Common/styles/breakpoints';
 import { fadeInUp } from 'Common/styles/animations';
+import colors from 'Common/styles/colors';
+import { useRouter } from 'next/router';
+import { SvgClipboard, SvgHouse, SvgPaperPlane, SvgUser } from './NavbarIcons';
 
 const Container = styled.div`
   height: 3rem;
   width: 70%;
   position: fixed;
+  z-index: 9999999999;
   bottom: 2rem;
   left: 0;
   right: 0;
@@ -54,33 +57,35 @@ const IconImage = styled.img`
 `;
 
 const Navbar: FC = () => {
+  const { route } = useRouter();
+
   return (
     <Container>
       <Link href="/" passHref={true}>
         <NavbarLink href="/">
           <i>
-            <IconImage src="/icons/house-solid.svg" />
+            <SvgHouse fill={route === '/' ? colors.lightBlue : '#fffff9'} />
           </i>
         </NavbarLink>
       </Link>
       <Link href="/about" passHref={true}>
         <NavbarLink href="/about">
           <i>
-            <IconImage src="/icons/user-solid.svg" />
+            <SvgUser fill={route === '/about' ? colors.lightBlue : '#fffff9'} />
           </i>
         </NavbarLink>
       </Link>
       <Link href="/projects" passHref={true}>
         <NavbarLink href="/projects">
           <i>
-            <IconImage src="/icons/clipboard-list-solid.svg" />
+            <SvgClipboard fill={route.includes('/projects') ? colors.lightBlue : '#fffff9'} />
           </i>
         </NavbarLink>
       </Link>
       <Link href="/contact" passHref={true}>
         <NavbarLink href="/contact">
           <i>
-            <IconImage src="/icons/paper-plane-solid.svg" />
+            <SvgPaperPlane fill={route === '/contact' ? colors.lightBlue : '#fffff9'} />
           </i>
         </NavbarLink>
       </Link>

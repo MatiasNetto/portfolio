@@ -5,6 +5,7 @@ import '@splidejs/react-splide/css/sea-green';
 import ProjectsSlider from 'Components/Portfolio/ProjectSlider/ProjectsSlider';
 import { desktopQuery } from 'Common/styles/breakpoints';
 import { getAllFilesMetadata } from 'Lib/mxd';
+import Head from 'next/head';
 
 const Container = styled.div`
   width: 100%;
@@ -25,6 +26,9 @@ const Container = styled.div`
 const Projects: FC<{ projects: any[] }> = ({ projects }) => {
   return (
     <>
+      <Head>
+        <title>Matias Netto - Proyectos</title>
+      </Head>
       <TopText subtitle="Algunos de" title="Mis Proyectos" />
       <Container>
         <ProjectsSlider projects={projects} />

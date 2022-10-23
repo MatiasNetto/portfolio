@@ -15,4 +15,9 @@ export const Container = styled.div`
 
 export const SocialMediaIcon = styled.img`
   width: 2rem;
+  transition: filter 0.3s;
+
+  &:hover {
+    filter: brightness(80%);
+  }
 `;

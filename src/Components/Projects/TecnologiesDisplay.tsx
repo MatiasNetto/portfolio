@@ -49,7 +49,7 @@ const Tecnologies: FC<IProps> = ({ children }) => {
       {tecArray.map((tec) => (
         <TecnologyContainer key={tec}>
           <Image
-            src={`/images/tecnologies/${tec.toLocaleLowerCase()}.png`}
+            src={`/images/tecnologies/${tec.toLocaleLowerCase()}.svg`}
             alt={tec}
             title={tec}
             width={48}

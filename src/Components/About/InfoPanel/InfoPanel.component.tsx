@@ -17,22 +17,27 @@ import { ITecnology } from '../SectionTecnologies/SectionTecnologies.interface';
 
 const STUDIES_DATA: IStudies[] = [
   {
-    image: '/images/instituciones/unq.png',
+    image: '/images/instituciones/unq.jpg',
     title: 'Lic. Informatica: (en progreso)',
     institute: ' - UNQ',
   },
   {
-    image: '/images/instituciones/fundacion-telefonica.png',
+    image: '/images/instituciones/fundacion-telefonica.jpg',
     title: 'SCRUM: Metodologias Agiles',
     institute: ' - Fundacion Telefonica',
   },
   {
-    image: '/images/instituciones/fundacion-telefonica.png',
+    image: '/images/instituciones/fundacion-telefonica.jpg',
     title: 'JavaScript: Programacion en JavaScript',
     institute: ' - Fundacion Telefonica',
   },
   {
-    image: '/images/instituciones/loreto.png',
+    image: '/images/instituciones/fundacion-telefonica.jpg',
+    title: 'Ciberseguridad',
+    institute: ' - Fundacion Telefonica',
+  },
+  {
+    image: '/images/instituciones/loreto.webp',
     title: 'Secundario: Bachiller en economia',
     institute: ' - Loreto',
   },
@@ -40,39 +45,43 @@ const STUDIES_DATA: IStudies[] = [
 
 const TECNOLOGIES_DATA: ITecnology[] = [
   {
-    image: '/images/tecnologies/html.png',
+    image: '/images/tecnologies/html.svg',
     name: 'HTML',
   },
   {
-    image: '/images/tecnologies/css.png',
+    image: '/images/tecnologies/css.svg',
     name: 'CSS',
   },
   {
-    image: '/images/tecnologies/javascript.png',
+    image: '/images/tecnologies/javascript.svg',
     name: 'JavaScript',
   },
   {
-    image: '/images/tecnologies/react.png',
+    image: '/images/tecnologies/react.svg',
     name: 'React.js',
   },
   {
-    image: '/images/tecnologies/redux.png',
+    image: '/images/tecnologies/typescript.svg',
+    name: 'TypeScript',
+  },
+  {
+    image: '/images/tecnologies/redux.svg',
     name: 'Redux',
   },
   {
-    image: '/images/tecnologies/next.png',
+    image: '/images/tecnologies/next.svg',
     name: 'Next.js',
   },
   {
-    image: '/images/tecnologies/node.png',
+    image: '/images/tecnologies/node.svg',
     name: 'Node.js',
   },
   {
-    image: '/images/tecnologies/mongodb.png',
+    image: '/images/tecnologies/mongodb.svg',
     name: 'MongoDB',
   },
   {
-    image: '/images/tecnologies/linux.png',
+    image: '/images/tecnologies/linux.svg',
     name: 'Linux',
   },
 ];

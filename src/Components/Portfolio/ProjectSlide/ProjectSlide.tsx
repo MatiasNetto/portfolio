@@ -1,12 +1,10 @@
 import { SplideSlide } from '@splidejs/react-splide';
 import { FC } from 'react';
-
-import { IProjectSlideProps } from './ProjectSlide.interface';
-import { Button, Container, ImageContainer, Subtitle, Title, DataContainer } from './ProjectSlide.styles';
+import { Container, ImageContainer, Subtitle, Title, DataContainer } from './ProjectSlide.styles';
 import TecnologiesRow from '../TecnologiesRow/TecnologiesRow';
 import Image from 'next/image';
 import { IProjectMetadata } from 'Common/Interfaces/mxd.interface';
-import Link from 'next/link';
+import Button from 'Components/Utils/Button';
 
 const ProjectSlide: FC<IProjectMetadata> = ({ title, subtitle, website, image, tecnologies, slug }) => {
   return (
@@ -21,14 +19,12 @@ const ProjectSlide: FC<IProjectMetadata> = ({ title, subtitle, website, image, t
           <Subtitle>{subtitle}</Subtitle>
           <TecnologiesRow tecnologies={tecnologies} />
           <div>
-            <Link href={`/projects/${slug}`} passHref>
-              <Button delay={0} contained>
-                Ver mas
-              </Button>
-            </Link>
-            <a href={website} target="_blank" rel="noreferrer">
-              <Button delay={0.1}>Sitio web</Button>
-            </a>
+            <Button delay={0} contained href={`/projects/${slug}`}>
+              Ver mas
+            </Button>
+            <Button delay={0.1} href={website} target="_blank">
+              Sitio web
+            </Button>
           </div>
         </DataContainer>
       </Container>

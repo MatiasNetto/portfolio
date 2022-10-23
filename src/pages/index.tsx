@@ -3,6 +3,8 @@ import { desktopQuery } from '../Common/styles/breakpoints';
 import colors from '../Common/styles/colors';
 import { fadeInLeft, fadeInRight, fadeInUp } from 'Common/styles/animations';
 import TopText from '../Components/Utils/TopText';
+import Head from 'next/head';
+import Button from 'Components/Utils/Button';
 
 const Container = styled.div`
   margin-top: 2rem;
@@ -81,39 +83,56 @@ const Paragraph = styled.p`
   }
 `;
 
-const Button = styled.button`
-  padding: 0.8rem 1rem;
-  background: ${colors.lightBlue};
-  border: none;
-  color: #fff;
-  font-size: 1rem;
-  border-radius: 6px;
-  opacity: 0;
-  animation: 1s 0.6s ${fadeInLeft} forwards;
+// const Button = styled.button`
+//   padding: 0.8rem 1rem;
+//   background: ${colors.lightBlue};
+//   border: none;
+//   color: #fff;
+//   font-size: 1rem;
+//   border-radius: 6px;
+//   opacity: 0;
+//   cursor: pointer;
+//   animation: 1s 0.6s ${fadeInLeft} forwards;
+//   transition: filter 0.3s;
 
-  ${desktopQuery} {
-    font-size: 1.3rem;
-  }
-`;
+//   &:hover {
+//     filter: brightness(90%);
+//   }
+
+//   ${desktopQuery} {
+//     font-size: 1.3rem;
+//   }
+// `;
 
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>Matias Netto - Home</title>
+      </Head>
       <TopText subtitle="Esta es" title="Mi Home Page" />
       <Container>
         <ImageContainer>
-          <Image src="/images/Me1.png" alt="ashei" />
+          <Image src="/images/Me1.webp" alt="Matias Netto" />
         </ImageContainer>
         <TextContainer>
           <Title>Matias Netto</Title>
 
-          <Subtitle>Web Developer</Subtitle>
+          <Subtitle>Frontend Developer</Subtitle>
 
-          <Paragraph>
+          {/* <Paragraph>
             Frontend developer. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit error vel
             debitis. Rerum consectetur perferendis quis doloremque adipisci quae.
+          </Paragraph> */}
+          <Paragraph>
+            Responsable, con capacidad de escucha, comprometido con lo que hago y abierto el trabajo en equipo.
+            <br />
+            Me adapto a cualquier proyecto y reto que me propongan.
           </Paragraph>
-          <Button>Descargar CV</Button>
+
+          <Button href="/content/matias-netto-cv.pdf" animation="fadeInLeft" target="_blank">
+            Descargar CV
+          </Button>
         </TextContainer>
       </Container>
     </>

@@ -29,7 +29,7 @@ const ContactForm: FC = () => {
   };
 
   const handleSubmit = async () => {
-    fetch('https://formspree.io/f/xgedbjok', { method: 'POST', body: JSON.stringify(formData) })
+    fetch('https://formspree.io/f/myyvdqlw', { method: 'POST', body: JSON.stringify(formData) })
       .then(() => {
         alert('Formulario enviado con exito');
         setFormData(defaultFormData);
@@ -42,19 +42,19 @@ const ContactForm: FC = () => {
 
   return (
     <FormContainer>
-      <InputContainer delay={0.2}>
+      <InputContainer delay={0.1}>
         <InputLogo src="/icons/user-regular.svg" />
         <Input placeholder="Nombre" name="name" value={formData.name} onChange={handleInputChange} />
       </InputContainer>
-      <InputContainer delay={0.3}>
+      <InputContainer delay={0.2}>
         <InputLogo src="/icons/envelope-regular.svg" />
         <Input placeholder="Email" name="contact" value={formData.contact} onChange={handleInputChange} />
       </InputContainer>
-      <InputContainer delay={0.4}>
+      <InputContainer delay={0.3}>
         <InputLogo src="/icons/question-regular.svg" />
         <Input placeholder="Asunto" name="subject" value={formData.subject} onChange={handleInputChange} />
       </InputContainer>
-      <InputContainer delay={0.5}>
+      <InputContainer delay={0.4}>
         <InputLogo src="/icons/phone-solid.svg" />
         <Input placeholder="Telefono/celular" name="phone" value={formData.phone} onChange={handleInputChange} />
       </InputContainer>

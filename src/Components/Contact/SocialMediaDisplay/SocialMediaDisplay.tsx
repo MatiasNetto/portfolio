@@ -4,9 +4,15 @@ import { Container, SocialMediaIcon } from './SocialMediaDisplay.styles';
 const SocialMediaDisplay: FC = () => {
   return (
     <Container>
-      <SocialMediaIcon src="/icons/github-brands.svg" />
-      <SocialMediaIcon src="/icons/linkedin-brands.svg" />
-      <SocialMediaIcon src="/icons/github-brands.svg" />
+      <a target="_blank" rel="noreferrer" href="https://github.com/matiasnetto">
+        <SocialMediaIcon src="/icons/github-brands.svg" />
+      </a>
+      <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/matiasnetto/">
+        <SocialMediaIcon src="/icons/linkedin-brands.svg" />
+      </a>
+      <a href="mailto: matiasnetto03@gmail.com">
+        <SocialMediaIcon src="/icons/envelope-solid.svg" />
+      </a>
     </Container>
   );
 };
