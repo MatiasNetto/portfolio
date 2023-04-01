@@ -15,7 +15,7 @@ export const TecnologyContainer = styled.div<{ delay: number }>`
   display: flex;
   align-items: center;
   opacity: 0;
-  animation: 1s ${({ delay }) => `0.${delay}`}s ${fadeInUp} forwards;
+  animation: 1s ${({ delay }) => `${delay / 10}`}s ${fadeInUp} forwards;
 `;
 
 export const ImageContainer = styled.div`

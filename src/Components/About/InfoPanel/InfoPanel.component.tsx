@@ -84,6 +84,10 @@ const TECNOLOGIES_DATA: ITecnology[] = [
     image: '/images/tecnologies/linux.svg',
     name: 'Linux',
   },
+  {
+    image: '/images/tecnologies/sql-database-solid.svg',
+    name: 'SQL',
+  },
 ];
 
 const InfoPanel: FC = () => {
